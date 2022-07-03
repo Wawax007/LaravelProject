@@ -15,6 +15,12 @@ class PostController extends Controller
         ]);
     }
 
+    public function viewAddStars(){
+        return view('addStars', [
+            'stars' => Stars::all()
+        ]);
+    }
+
     public function addStars(Request $request){
         $stars = new Stars();
         $stars->Nom=$request->Nom;

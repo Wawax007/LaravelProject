@@ -16,11 +16,4 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index']);
 Route::post('addStars', [PostController::class, 'addStars']);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/addStars', [PostController::class, 'viewAddStars']);
