@@ -15,6 +15,12 @@ class PostController extends Controller
         ]);
     }
 
+    public function backoffice(){
+        return view('backoffice', [
+            'stars' => Stars::all()
+        ]);
+    }
+
     public function viewAddStars(){
         return view('addStars', [
             'stars' => Stars::all()

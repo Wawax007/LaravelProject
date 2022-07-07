@@ -21,12 +21,14 @@
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
         "tailwindcss": "^3.1.4",
-        "vue": "^2.6.12",
-        "vue-loader": "^15.9.8",
+        "vue": "^3.2.36",
+        "vue-loader": "^17.0.0",
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@dafcoe/vue-collapsible-panel": "^0.2.0",
         "flowbite": "^1.4.7",
-        "tw-elements": "^1.0.0-alpha12"
+        "tw-elements": "^1.0.0-alpha12",
+        "vue-router": "^4.0.13"
     }
 }
