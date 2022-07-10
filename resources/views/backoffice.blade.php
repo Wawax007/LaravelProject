@@ -22,15 +22,22 @@
     </style>
 </head>
 <body>
+
+<a class="ml-4" href="index.php">HOME</a>
+
 @if($stars)
     @foreach($stars as $star) <!-- Affichage Stars -->
     <div>
         <details class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium text-left border border-gray-200 dark:border-gray-700 border-b-0 text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-t-xl">
             <summary class="bg-inherit px-5 py-3 text-lg cursor-pointer">{{$star['Prenom']}} {{ $star['Nom'] }}
                 <div class="img-fluid" style="display: flex; align-content: space-around; float: right;">
-                    <a href="addStars"><img style="max-width: 40%;height: auto;" src="../public/img/icons/add.png"></a>
+                    <a href="viewAddStars"><img style="max-width: 40%;height: auto;" src="../public/img/icons/add.png"></a>
                     <a><img style="max-width: 40%;height: auto; margin-left: 5%; margin-right: 5%" src="../public/img/icons/edit.png"></a>
-                    <a><img style="max-width: 40%;height: auto;" src="../public/img/icons/remove.png"></a>
+                    <form method="POST" action="{{ route('stars.destroy', $star->id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <button onclick="return confirm('Etes vous sur de vouloir supprimer?')" ><img style="max-width: 40%;height: auto;" src="../public/img/icons/remove.png"></button>
+                    </form>
                 </div>
             </summary>
             <div class="bg-white px-5 py-3 border border-gray-300 text-sm font-light img-fluid" style="align-content: space-around;">

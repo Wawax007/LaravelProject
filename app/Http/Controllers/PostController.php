@@ -21,6 +21,12 @@ class PostController extends Controller
         ]);
     }
 
+    public function viewRemoveStars(){
+        return view('removeStars', [
+            'stars' => Stars::all()
+        ]);
+    }
+
     public function viewAddStars(){
         return view('addStars', [
             'stars' => Stars::all()
@@ -35,6 +41,11 @@ class PostController extends Controller
         $stars->Description=$request->Description;
         if($stars->save()) {
             echo "La star a été enregistré !";
-        }return redirect('index.php');
+        }return redirect('backoffice');
+    }
+
+    public function destroy(Stars $star){
+        $star->delete();
+        return back();
     }
 }

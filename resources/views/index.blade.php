@@ -23,7 +23,7 @@
 </head>
 
 <body>
-<a href="backoffice">BACK OFFICE</a>
+<a class="ml-4" href="backoffice">BACK OFFICE</a>
 @if($stars)
     @foreach($stars as $star) <!-- Affichage Stars -->
     <div>
@@ -31,7 +31,7 @@
             <summary class="bg-inherit px-5 py-3 text-lg cursor-pointer">{{$star['Prenom']}} {{ $star['Nom'] }}</summary>
             <div class="bg-white px-5 py-3 border border-gray-300 text-sm font-light" style="align-content: space-around;">
                 <div style="display: flex; align-content: space-around; margin-left: 1%;">
-                    <img class="object-scale-down h-48 w-96 md:object-scale-down" src="../public/img/{{ $star['Image'] }}" alt="star">
+                    <img class="object-scale-down h-48 w-96 md:object-scale-down" src="../public/img/{{ $star['Image'] }}" alt="star {{ $star['Nom'] }}">
                     <p class="mt-2 ml-2 text-gray-500 float-right dark:text-gray-400"> {{ $star['Description'] }}</p>
                 </div>
             </div>

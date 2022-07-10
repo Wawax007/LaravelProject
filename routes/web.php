@@ -16,5 +16,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index']);
 Route::post('addStars', [PostController::class, 'addStars']);
-Route::get('/addStars', [PostController::class, 'viewAddStars']);
+Route::get('/viewAddStars', [PostController::class, 'viewAddStars']);
 Route::get('/backoffice', [PostController::class, 'backoffice']);
+Route::post('/removeStars', [PostController::class, 'removeStars']);
+Route::resource('/stars', PostController::class);
