@@ -18,5 +18,6 @@ Route::get('/', [PostController::class, 'index']);
 Route::post('addStars', [PostController::class, 'addStars']);
 Route::get('/viewAddStars', [PostController::class, 'viewAddStars']);
 Route::get('/backoffice', [PostController::class, 'backoffice']);
-Route::post('/removeStars', [PostController::class, 'removeStars']);
+Route::get('/viewEditStars/{id}', [PostController::class, 'edit']);
+Route::put('update-stars/{id}', [PostController::class, 'update']);
 Route::resource('/stars', PostController::class);

@@ -10,4 +10,5 @@ class Stars extends Model
 {
     use HasFactory;
     public $timestamps=false;
+
 }
