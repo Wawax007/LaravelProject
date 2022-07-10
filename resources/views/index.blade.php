@@ -31,8 +31,8 @@
             <summary class="bg-inherit px-5 py-3 text-lg cursor-pointer">{{$star['Prenom']}} {{ $star['Nom'] }}</summary>
             <div class="bg-white px-5 py-3 border border-gray-300 text-sm font-light" style="align-content: space-around;">
                 <div style="display: flex; align-content: space-around; margin-left: 1%;">
-                    <img class="object-scale-down h-48 w-96 md:object-scale-down" src="../public/img/{{ $star['Image'] }}" alt="{{$star['Prenom']}} {{ $star['Nom'] }}">
-                    <p class="mt-2 ml-2 text-gray-500 float-right dark:text-gray-400"> {{ $star['Description'] }}</p>
+                    <img class="object-scale-down h-48 w-96 md:object-scale-down sm:object-scale-down lg:object-scale-down" src="../public/img/{{ $star['Image'] }}" alt="{{$star['Prenom']}} {{ $star['Nom'] }}">
+                    <p class="ml-2 text-gray-500 float-right dark:text-gray-400 md:text-sm "> {{ $star['Description'] }}</p>
                 </div>
             </div>
         </details>
@@ -41,9 +41,6 @@
 @endif
 
 
-<script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
-<script src="../path/to/flowbite/dist/flowbite.js"></script>
-<script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+
 </body>
 </html>
