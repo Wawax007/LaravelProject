@@ -29,8 +29,8 @@
     @foreach($stars as $star) <!-- Affichage Stars -->
     <div>
         <details class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium text-left border border-gray-200 dark:border-gray-700 border-b-0 text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-t-xl">
-            <summary class="bg-inherit px-5 py-3 text-lg cursor-pointer">{{$star['Prenom']}} {{ $star['Nom'] }}
-                <div class="img-fluid" style="display: flex; align-content: space-around; float: right;">
+            <summary class="bg-inherit px-5 py-3 text-lg cursor-pointer md:mb-4 xs:mb-4 lg:mb-4 ">{{$star['Prenom']}} {{ $star['Nom'] }}
+                <div class="md:mb-2.5 xs:mb-2.5 lg:mb-2.5" style="display: flex; align-content: space-around; float: right;">
                     <a href="viewAddStars"><img class="position-fixed" style="max-width: 40%;height: auto;" src="../public/img/icons/add.png" alt="Add"></a>
                     <a href="{{ url('viewEditStars/'.$star->id) }}"><img style="max-width: 40%;height: auto; margin-left: 5%; margin-right: 5%" src="../public/img/icons/edit.png" alt="Edit"></a>
                     <form method="POST" action="{{ route('stars.destroy', $star->id) }}">
