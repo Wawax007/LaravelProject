@@ -40,7 +40,7 @@
                     </form>
                 </div>
             </summary>
-            <div class="bg-white px-5 py-3 border border-gray-300 font-light" style="align-content: space-around;">
+            <div class="bg-white px-5 py-3 border border-gray-300 font-light" style="display: flex; align-content: space-around; margin-left: 1%;">
                 <img class="object-scale-down h-48 w-96 md:object-scale-down sm:object-scale-down lg:object-scale-down" src="../public/img/{{ $star['Image'] }}" alt="{{$star['Prenom']}} {{ $star['Nom'] }}">
                 <p class="ml-2 text-gray-500 float-right dark:text-gray-400 md:text-sm "> {{ $star['Description'] }}</p>
             </div>
