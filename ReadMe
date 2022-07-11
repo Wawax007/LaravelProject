@@ -1,0 +1,11 @@
+Bienvenue sur l'application de gestion de stars,
+
+Étapes d'installations :
+
+- Installer wamp
+- Aller dans le dossier C:\wamp64\www (emplacement d'installation)
+- Ouvrir une invite de commande dans ce dossier.
+- Taper cette commande : git clone https://github.com/Wawax007/LaravelProject.git
+- Pour accéder au projet : http://localhost:8080/LaravelProject/public/index.php
+
+
